@@ -8,11 +8,11 @@ A private social media app for CIFO
   * get profile set user data in prefs
   * read token from login and set in prefs
   * get token from prefs and send in requests headers
-* Posts
-  * show feed
 * Welcome page
   * add carousel and control the index
   * add arrows buttons
+* Feeds Page
+  * show feeds
 
 ## DOCS
 
