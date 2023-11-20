@@ -1,6 +1,6 @@
 # [WIP] social_media_app
 
-A private social media app for CIFO
+A private social media app for CIFO. It uses the API https://cifo.indalter.es/api-docs.
 
 ## TODO
 * Login
@@ -13,6 +13,13 @@ A private social media app for CIFO
   * add arrows buttons.
 * Feeds Page
   * show feeds.
+* Users Page
+  * get user list from user repository.
+  * show users in page.
+  * get following user list.
+  * add follow or unfollow button for each user in list.
+  * implement follow and unfollow action in user repository.
+  * filter current user in users list.
 
 ## DOCS
 
