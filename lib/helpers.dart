@@ -25,10 +25,10 @@ class Helpers {
 
   static String? emailValidator(String? value) {
     if (value == null || value.isEmpty) {
-      return "El campo no puede estar vacío";
+      return "Email can't be empty";
     }
     if (!Helpers.isEmail(value)) {
-      return "El campo email no tiene un formato correcto";
+      return "Email is not in an accepted format";
     }
     return null;
   }

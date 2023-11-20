@@ -1,10 +1,11 @@
 import 'package:flutter/material.dart';
 
+import '../components/text_input.dart';
 import '../helpers.dart';
 
 class LoginPage extends StatelessWidget {
-  var emailController = TextEditingController();
-  var passwordController = TextEditingController();
+  final emailController = TextEditingController();
+  final passwordController = TextEditingController();
 
   LoginPage({super.key});
 
@@ -17,42 +18,24 @@ class LoginPage extends StatelessWidget {
               padding: const EdgeInsets.fromLTRB(24, 128, 24, 24),
               child: Column(
                 children: [
-                  const Text("Hello Again!"),
-                  const Text("Sign in to your account"),
+                  const Text("Hello Again!", style: TextStyle(fontSize: 40, fontWeight: FontWeight.bold)),
+                  const SizedBox(height: 2),
+                  const Text("Sign in to your account", style: TextStyle(fontSize: 14, color: Colors.grey)),
+                  const SizedBox(height: 32),
                   Form(
                       child: Column(
                     children: [
-                      TextFormField(
-                        cursorColor: Colors.green,
-                        validator: Helpers.emailValidator,
-                        controller: emailController,
-                        onEditingComplete: () => print("onEditingComplete"),
-                        onTapOutside: (event) => print("onTapOutside"),
-                        decoration: InputDecoration(
-                          hintText: "Enter your email",
+                      TextInput(
+                          inputController: emailController,
                           labelText: "Email address",
-                          border: OutlineInputBorder(
-                              borderRadius: BorderRadius.circular(10)),
-                        ),
-                      ),
+                          hintText: "Enter your email",
+                          validator: Helpers.emailValidator),
                       const SizedBox(height: 16),
-                      TextFormField(
-                        cursorColor: Colors.green,
-                        obscureText: true,
-                        autocorrect: true,
-                        decoration: InputDecoration(
-                          focusedBorder: OutlineInputBorder(
-                              borderSide: const BorderSide(color: Colors.green),
-                            borderRadius: BorderRadius.circular(10),
-                          ),
-                          hintText: "Enter your password",
+                      TextInput(
+                          inputController: passwordController,
                           labelText: "Password",
-                          labelStyle: const TextStyle(color: Colors.green),
-                          border: OutlineInputBorder(
-                              borderSide: const BorderSide(color: Colors.green),
-                              borderRadius: BorderRadius.circular(10)),
-                        ),
-                      )
+                          hintText: "Enter your password",
+                          obscureText: true),
                     ],
                   )),
                 ],
