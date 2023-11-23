@@ -3,14 +3,9 @@
 A private social media app for CIFO. It uses the API https://cifo.indalter.es/api-docs.
 
 ## TODO
-* Login
-  * get user and set id in prefs.
-  * get profile set user data in prefs.
-  * read token from login and set in prefs.
-  * get token from prefs and send in requests headers.
 * Welcome page
-  * add carousel and control the index.
-  * add arrows buttons.
+  * format carousel and control the index.
+  * format arrows buttons.
 * Feeds Page
   * show feeds.
 * Users Page
@@ -20,6 +15,9 @@ A private social media app for CIFO. It uses the API https://cifo.indalter.es/ap
   * add follow or unfollow button for each user in list.
   * implement follow and unfollow action in user repository.
   * filter current user in users list.
+* Upload Post
+  * Create post
+  * Multipart upload image and update post
 
 ## DOCS
 
